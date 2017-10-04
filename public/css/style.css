@@ -1,0 +1,73 @@
+.navbar-brand img{
+  width: 40%;
+  height: 40%;
+}
+
+
+footer{
+	text-align: center;
+}
+.imagecard{
+  border-radius: 8px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.video-container {
+    position: relative;
+    padding-bottom:250px;
+    padding-top: 0px;
+    padding-left: 27px;
+    padding-right: 27px;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+}
+
+@media (min-width:1025px) and (min-width:1281px), (min-width:768px) {
+	.canvas-button{
+		visibility: hidden
+	}
+}
+
+
+
+@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+#image .jumbo-cover{
+    background-color: ##d8dbc5;
+    margin-bottom: 2rem;`enter code here`
+    min-height: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#text .jumbo-cover{
+   background-image: url("../images/sitedata/cover/videos.jpg");
+}
+
+
+
+#gif .jumbo-cover{
+   background-image: url("../images/sitedata/cover/videos.jpg");
+}
+
+.custom-file-control:before{
+  content: "Browse";
+}
+.custom-file-control:after{
+  content: "Add files..";
+}
