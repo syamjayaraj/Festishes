@@ -61,7 +61,7 @@ class CategoryController extends Controller
             $cat=new Category;
             Category::where('slug', $slug)->update(array('cover' => $filename));
 
-        return ('Done');
+        return view('admin.create.done');
     }
 
     /**

@@ -43,7 +43,7 @@ class TextController extends Controller
         $txt->body=request('wishing');
         $txt->feat=0;
         $txt->save();
-        return 'Your Text Wishing is posted';
+        return view('admin.create.done');
     }
 
     /**

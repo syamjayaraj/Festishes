@@ -44,7 +44,7 @@ class VideoController extends Controller
         $vdo->cat_slug=request('cat_slug');
         $vdo->feat=0;
         $vdo->save();
-        return 'Your Video Wishing is posted';
+        return view('admin.create.done');
     }
 
     /**

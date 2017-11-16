@@ -53,7 +53,7 @@ class ImageController extends Controller
             $img->feat=0;
             $img->save();
 
-            return 'Your Image Wishing is submitted';
+            return view('admin.create.done');
     }
 
     /**

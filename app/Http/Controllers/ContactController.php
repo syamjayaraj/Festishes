@@ -42,7 +42,7 @@ class ContactController extends Controller
         $con->mobile=request('mobile');
         $con->msg=request('msg');
         $con->save();
-        return 'Your Message is Sent to Festishes Team.';
+        return view('done');
 
     }
 
