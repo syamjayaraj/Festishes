@@ -42,6 +42,10 @@ Route::get('help',function(){
 });
 
 Auth::routes();
+Route::get('/new8766',function(){
+	return view('auth/new8766');
+});
+
 
 			// Back End
 // Home

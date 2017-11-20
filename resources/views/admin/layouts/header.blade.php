@@ -25,16 +25,17 @@
           <li class="nav-item">
             <a class="nav-link" href="{{url('help')}}">Help</a>
           </li>
-{{--           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="Preview" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            En
-            </a>
-            <div class="dropdown-menu" aria-labelledby="Preview">
-            <a class="dropdown-item" href="#">English</a>
-            <a class="dropdown-item" href="#">Malayalam</a>
-            <a class="dropdown-item" href="#">Hindi</a>
-            </div>
-          </li> --}}
+          <li>
+              <a class="nav-link" href="{{ route('logout') }}"
+                  onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+                  Logout
+              </a>
+
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  {{ csrf_field() }}
+              </form>
+          </li>
         </ul>
       </div>
     </nav>

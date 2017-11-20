@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Text;
+use App\Image;
+use App\Gif;
+use App\Video;
 
 class HomeController extends Controller
 {
@@ -23,7 +28,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin/home');
+        $admins=User::all();
+        $txt=Text::count();
+        $img=Image::count();
+        $gif=Gif::count();
+        $vid=Video::count();
+        return view('admin.home', compact('admins','txt','img','gif','vid'));
     }
     public function create()
     {

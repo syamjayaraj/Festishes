@@ -11,8 +11,11 @@ Home
             <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Other Festivals</button>
           </p>
           <div class="jumbotron jumbo-cover" style="background-image: url('../../images/sitedata/cover/{{$cat_slug->cover}}');">
+            <div class="rectangle">
               <h4>{{$cat_slug->name}}</h4>
+              <br>
               <p>{{$cat_slug->desc}}</p>
+            </div>
           </div>
          <nav class="breadcrumb">
           <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug)}}">Featured</a>            

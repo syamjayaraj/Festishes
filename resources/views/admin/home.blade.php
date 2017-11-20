@@ -24,10 +24,10 @@ Dashboard
               <div class="card mb-3" style="max-width: 20rem;">
                 <div class="card-header bg-faded">Texts</div>
                 <div class="card-body">
-                  <h4 class="card-title">Total : 20</h4>
-                  <p class="card-text">Published : 17</p>
+                  <h4 class="card-title">Total : {{$txt}}</h4>
+{{--                   <p class="card-text">Published : 17</p>
                   <p class="card-text">Pending : 2</p>
-                  <p class="card-text">Rejected : 1</p>
+                  <p class="card-text">Rejected : 1</p> --}}
                 </div>
               </div>
             </div>
@@ -36,10 +36,10 @@ Dashboard
               <div class="card mb-3" style="max-width: 20rem;">
                 <div class="card-header bg-faded">Images</div>
                 <div class="card-body">
-                  <h4 class="card-title">Total : 20</h4>
-                  <p class="card-text">Published : 17</p>
+                  <h4 class="card-title">Total : {{$img}}</h4>
+{{--                   <p class="card-text">Published : 17</p>
                   <p class="card-text">Pending : 2</p>
-                  <p class="card-text">Rejected : 1</p>
+                  <p class="card-text">Rejected : 1</p> --}}
                 </div>
               </div>
             </div>
@@ -48,10 +48,10 @@ Dashboard
               <div class="card mb-3" style="max-width: 20rem;">
                 <div class="card-header bg-faded">Gifs</div>
                 <div class="card-body">
-                  <h4 class="card-title">Total : 20</h4>
-                  <p class="card-text">Published : 17</p>
+                  <h4 class="card-title">Total : {{$gif}}</h4>
+{{--                   <p class="card-text">Published : 17</p>
                   <p class="card-text">Pending : 2</p>
-                  <p class="card-text">Rejected : 1</p>
+                  <p class="card-text">Rejected : 1</p> --}}
                 </div>
               </div>
             </div>
@@ -60,10 +60,10 @@ Dashboard
               <div class="card mb-3" style="max-width: 20rem;">
                 <div class="card-header bg-faded">Videos</div>
                 <div class="card-body">
-                  <h4 class="card-title">Total : 20</h4>
-                  <p class="card-text">Published : 17</p>
+                  <h4 class="card-title">Total : {{$vid}}</h4>
+{{--                   <p class="card-text">Published : 17</p>
                   <p class="card-text">Pending : 2</p>
-                  <p class="card-text">Rejected : 1</p>
+                  <p class="card-text">Rejected : 1</p> --}}
                 </div>
               </div>
             </div>
@@ -74,24 +74,19 @@ Dashboard
           <tr>
             <th>No.</th>
             <th>Name</th>
+            <th>Email</th>
             <th>Joining Date</th>
-            <th>Posts</th>
           </tr>
         </thead>
         <tbody>
+@foreach($admins as $admin)          
           <tr>
-            <td>1</td>
-            <td>Syamlal</td>
-            <td>26/10/2017</td>
-            <td>120</td>
+            <td>{{$admin->id}}</td>
+            <td>{{$admin->name}}</td>
+            <td>{{$admin->email}}</td>
+            <td>{{$admin->created_at}}</td>
           </tr>
-
-           <tr>
-            <td>1</td>
-            <td>Syamlal</td>
-            <td>26/10/2017</td>
-            <td>120</td>
-          </tr>
+@endforeach
         </tbody>
       </table>
 
