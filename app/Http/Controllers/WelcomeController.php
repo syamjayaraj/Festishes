@@ -19,10 +19,10 @@ class WelcomeController extends Controller
     public function index()
     {
     	$categories=Category::all();
-        $texts = Text::where('feat','=', '1')->get();
-        $images = Image::where('feat','=', '1')->get();
-        $gifs = Gif::where('feat','=', '1')->get();
-        $videos = Video::where('feat','=', '1')->get();        
+        $texts = Text::orderBy('created_at', 'desc')->take(6)->get();
+        $images = Image::orderBy('created_at', 'desc')->take(6)->get();
+        $gifs = Gif::orderBy('created_at', 'desc')->take(6)->get();
+        $videos = Video::orderBy('created_at', 'desc')->take(6)->get();        
     	return view('welcome',compact('texts','images','gifs','videos','categories'));
     }
 }

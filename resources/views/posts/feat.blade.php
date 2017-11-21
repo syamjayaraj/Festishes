@@ -18,7 +18,7 @@ Home
             </div>
           </div>
          <nav class="breadcrumb">
-          <a class="breadcrumb-item active" href="#">Featured</a>            
+          <a class="breadcrumb-item active" href="#">Latest</a>            
           <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug.'/texts')}}">Texts</a>
           <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug.'/images')}}">Images</a>
           <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug.'/gifs')}}">Gifs</a>

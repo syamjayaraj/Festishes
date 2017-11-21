@@ -60,6 +60,12 @@ class TextController extends Controller
         return view('posts.texts', compact('texts','categories','cat_slug'));
     }
 
+    public function showexp($slug,$id)
+    {
+        $text = Text::where('cat_slug',$slug)->where('id',$id)->first();
+        return view('posts.textcardmax',compact('text'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

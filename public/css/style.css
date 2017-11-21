@@ -72,11 +72,7 @@ footer{
   content: "Add files..";
 }
 
-
-.rectangle{
-      width: 250px;
-      height: 150px;    
-      padding: 5px 5px 5px;
-      box-sizing: border-box;
-      background: #a3ad9a;
+.stroke{
+  font-family: system-ui;
+  -webkit-text-stroke: 1px #b4c691;
 }

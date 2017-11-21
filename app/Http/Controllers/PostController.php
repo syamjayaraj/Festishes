@@ -91,12 +91,18 @@ class PostController extends Controller
     public function showfeat($slug)
     {
         $categories=Category::all();
-        $texts = Text::where('cat_slug',$slug)->where('feat','=', '1')->get();
-        $images = Image::where('cat_slug',$slug)->where('feat','=', '1')->get();
-        $gifs = Gif::where('cat_slug',$slug)->where('feat','=', '1')->get();
-        $videos = Video::where('cat_slug',$slug)->where('feat','=', '1')->get();
+        $texts = Text::where('cat_slug',$slug)->orderBy('created_at', 'desc')->take(10)->get();
+        $images = Image::where('cat_slug',$slug)->orderBy('created_at', 'desc')->take(10)->get();
+        $gifs = Gif::where('cat_slug',$slug)->orderBy('created_at', 'desc')->take(10)->get();
+        $videos = Video::where('cat_slug',$slug)->orderBy('created_at', 'desc')->take(10)->get();
         $cat_slug=Category::where('slug',$slug)->first();
         return view('posts.feat', compact('texts','images','gifs','videos','categories','cat_slug'));
+    }
+
+    public function showfeatexp($slug,$id)
+    {
+        $text = Text::where('cat_slug',$slug)->where('id',$id)->first();
+        return view('posts.featcardmax',compact('text'));
     }
 
     /**
