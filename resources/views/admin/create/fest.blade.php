@@ -12,25 +12,20 @@ Create
             <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Menu </button>
           </p>
           <div class="jumbotron jumbo-cover">
-            <h1>Add your wishings to Festishes</h1>
-            <p>Note : You can add Festival Category where your wishing message needs to be belonged to if and only if it is not present in the Festival List</p>
+            <h1>Add Festival</h1>
+            <p>You can add the Festival name and Festival description below.</p>
           </div>
         <nav class="breadcrumb">           
             <a class="breadcrumb-item" href="">Create</a>
         </nav>
 
-      <p><span class="badge badge-secondary">Festivals</span></p>
+      <p><span class="badge badge-secondary">Festival</span></p>
 <form class="form-horizontal" method="POST" action="/festpost">
 {{csrf_field()}}
   <fieldset>
         <div class="form-group">
           <div class="col-lg-4">
             <input type="text" class="form-control" name="name" placeholder="Name">
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-lg-4">
-            <input type="text" class="form-control" name="slug" placeholder="slug">
           </div>
         </div>
         <div class="form-group">

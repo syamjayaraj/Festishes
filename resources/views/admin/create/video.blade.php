@@ -21,27 +21,21 @@ Create
         </nav>
 
 
-<p><span class="badge badge-secondary">Video</span></p>
+<p><span class="badge badge-secondary">Image</span></p>
 
-<form class="form-horizontal" method="POST" action="/addvideo">
+<form class="form-horizontal" enctype="multipart/form-data" method="POST" action="/addvideo">
 {{csrf_field()}}
   <fieldset>
-    <input type="hidden" name="cat_slug" value="{{$cat}}">
-    <div class="form-group">
-      <div class="col-lg-6">
-        <input type="text" name="name" class="form-control" placeholder="Name of Wishing">
-      </div>
+  <input type="hidden" name="cat_slug" value="{{$cat}}">
+  <div class="form-group">
+    <label>Upload the Video wishing</label>
+    <input type="file" class="form-control-file" name="wishing">
+  </div>
+  <div class="form-group">
+    <div class="col-lg-1 col-lg-offset-4">
+      <button type="submit" class="btn btn-primary">Submit</button>
     </div>
-    <div class="form-group">
-      <div class="col-lg-6">
-        <input type="text" name="wishing" class="form-control" placeholder="Paste the Link to Video">
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-lg-1 col-lg-offset-4">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
+  </div>
   </fieldset>
 </form>
 </div>

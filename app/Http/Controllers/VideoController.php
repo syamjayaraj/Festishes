@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Input;
+
 use App\Category;
 
 use App\Video;
@@ -38,12 +40,19 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
+        $input = $request->all();
+        $file=Input::file('wishing');
+        $filepath='images/wishings/video';
+        $filename=date('D'.'M'.'Y').time('H').rand(0,999).'_'.$file->getClientOriginalName();
+        $filesize=$file->getClientSize()/1000;
+        $file->move($filepath , $filename);
         $vdo=new Video;
-        $vdo->name=request('name');
-        $vdo->link=request('wishing');
         $vdo->cat_slug=request('cat_slug');
+        $vdo->name=$filename;
+        $vdo->size=$filesize;
         $vdo->feat=0;
         $vdo->save();
+
         return view('admin.create.done');
     }
 
@@ -59,6 +68,11 @@ class VideoController extends Controller
         $videos = Video::where('cat_slug',$slug)->get();
         $cat_slug=Category::where('slug',$slug)->first();
         return view('posts.videos', compact('videos','categories','cat_slug'));
+    }
+    public function showexp($slug,$id)
+    {
+        $video = Video::where('cat_slug',$slug)->where('id',$id)->first();
+        return view('posts.videocardmax',compact('video'));
     }
 
     /**

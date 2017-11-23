@@ -1,5 +1,7 @@
-
 @extends('layouts.master')
+@section('title')
+Contact | Festishes
+@endsection
 @section('content')
     <div class="container">
         <div class="row row-offcanvas row-offcanvas-right">

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-Home
+{{$cat_slug->name}} | Texts | Festishes
 @endsection
 @section('content')
     <div class="container">
@@ -12,10 +12,10 @@ Home
           </p>
           <div class="jumbotron jumbo-cover" style="background-image: url('../../images/sitedata/cover/{{$cat_slug->cover}}');">
               <h4 class="stroke">{{$cat_slug->name}}</h4>
-              <p>{{$cat_slug->desc}}</p>
+              <p>{!!nl2br(e($cat_slug->desc))!!}</p>
           </div>
          <nav class="breadcrumb">
-          <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug)}}">Featured</a>            
+          <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug)}}">Latest</a>            
           <a class="breadcrumb-item active" href="{{url('/fest/'.$cat_slug->slug.'/texts')}}">Texts</a>
           <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug.'/images')}}">Images</a>
           <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug.'/gifs')}}">Gifs</a>

@@ -54,7 +54,7 @@ class GifController extends Controller
             $gif->feat=0;
             $gif->save();
 
-            return 'Your Gif Wishing is submitted';
+            return view('admin.create.done');
     }
 
     /**

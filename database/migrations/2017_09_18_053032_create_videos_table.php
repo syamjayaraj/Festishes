@@ -18,7 +18,7 @@ class CreateVideosTable extends Migration
             $table->timestamps();
             $table->string('cat_slug');
             $table->string('name');
-            $table->string('link');
+            $table->string('size');
             $table->integer('feat');
         });
     }

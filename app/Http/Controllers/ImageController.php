@@ -69,6 +69,11 @@ class ImageController extends Controller
         $cat_slug=Category::where('slug',$slug)->first();
         return view('posts.images', compact('images','categories','cat_slug'));
     }
+    public function showexp($slug,$id)
+    {
+        $image = Image::where('cat_slug',$slug)->where('id',$id)->first();
+        return view('posts.imagecardmax',compact('image'));
+    }
 
     /**
      * Show the form for editing the specified resource.

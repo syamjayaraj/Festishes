@@ -6,40 +6,26 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-
-    <title>Share | Festishes</title>
-
+    <title>Share Image | Festishes</title>
     <!-- Bootstrap core CSS -->
     <link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="{{ URL::asset('css/exp.css') }}" rel="stylesheet">
   </head>
-
 <body>
-
     <div class="site-wrapper">
-
       <div class="site-wrapper-inner">
-
         <div class="cover-container">
-
-
-
-          <main role="main" class="inner cover">
-            <p class="lead" id="copy-wish">{{$text->body}}</p>
-            <p class="lead">
-              
+          <main role="main" class="inner cover">           
+            <img src="{{url('images/wishings/image/'.$image->name)}}" alt="Image not found" class="imagecard" height="600" width="600">
+            <p class="lead">             
                     <div class="modal-footer">
-                      <a href="" onclick="copyToClipboard(document.getElementById('copy-wish'));" data-toggle="tooltip" title="Copy to Clipboard"><i class="fa fa-clipboard" style="font-size:36px"></i></a>
-
-
                           <!-- Default dropup button -->
                   <div class="btn-group dropup">
                     <a href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-share-alt-square" style="font-size:36px" data-toggle="tooltip" title="Share"></i></a>
                     <div class="dropdown-menu">
                       <li class="dropdown-item"><a href="whatsapp://send?text={{url()->current()}}" data-action="share/whatsapp/share" data-toggle="tooltip" title="Share Whatsapp"><i class="fa fa-whatsapp"></i>&nbsp&nbsp<span>Whatsapp</span></a></li>
-
-                      <li class="dropdown-item" data-href="{{url()->current()}}" data-layout="button" data-size="small" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.festishes.com%2Ffest%2F{{$text->cat_slug}}%2Ffeat%2F{{$text->id}}&amp;src=sdkpreparse"><i class="fa fa-facebook"></i>&nbsp&nbsp<span>Facebook</span></a></li>
+                      <li class="dropdown-item" data-href="{{url()->current()}}" data-layout="button" data-size="small" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.festishes.com%2Ffest%2F{{$image->cat_slug}}%2Fimages%2F{{$image->id}}&amp;src=sdkpreparse"><i class="fa fa-facebook"></i>&nbsp&nbsp<span>Facebook</span></a></li>
 
                       <li class="dropdown-item"><a href="https://twitter.com/share?url={{url()->current()}}" data-toggle="tooltip" title="Share Twitter"><i class="fa fa-twitter"></i>&nbsp&nbsp<span>Twitter</span></a></li>
                     </div>
@@ -54,13 +40,9 @@
               <p>Copyright &copy; <a href="http://floyet.com">FloYET</a> 2017</p>
             </div>
           </footer>
-
         </div>
-
       </div>
-
     </div>
-
       <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

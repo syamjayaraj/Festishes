@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-Home
+Home | Festishes
 @endsection
 @section('content')
     <div class="container">
@@ -12,8 +12,8 @@ Home
             <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">List of Festivals</button>
           </p>
           <div class="jumbotron jumbo-cover" style="background-image: url('../../images/sitedata/cover/home.jpg');">
-            <h1>Poke Them ...</h1>
-            <p>Wish your favorites in all moments ... </p>
+            <h2>Festival + Wishes</h2>
+            <p>Be the first to wish your favorites.</p>
           </div>
         <nav class="breadcrumb">           
             <a class="breadcrumb-item" href="">Latest</a>

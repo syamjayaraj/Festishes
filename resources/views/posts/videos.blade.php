@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-Home
+{{$cat_slug->name}} | Videos | Festishes
 @endsection
 @section('content')
     <div class="container">
@@ -18,7 +18,7 @@ Home
             </div>
           </div>
           <nav class="breadcrumb">
-          <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug)}}">Featured</a>            
+          <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug)}}">Latest</a>            
           <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug.'/texts')}}">Texts</a>
           <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug.'/images')}}">Images</a>
           <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug.'/gifs')}}">Gifs</a>

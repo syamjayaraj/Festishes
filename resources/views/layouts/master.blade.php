@@ -13,7 +13,6 @@
     <!-- Custom styles for this template -->
     <link href="{{ URL::asset('css/offcanvas.css') }}" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
   </head>
 <body>
 	@include('layouts.header')
@@ -30,5 +29,6 @@
     <script src="{{ URL::asset('js/ie10-viewport-bug-workaround.js') }}"></script>
     <script src="{{ URL::asset('js/offcanvas.js') }}"></script>
     <script src="{{ URL::asset('js/modal.js') }}"></script>
+    <script src="{{ URL::asset('js/copyclipboard.js') }}"></script>
 </body>
 </html>

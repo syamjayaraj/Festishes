@@ -43,7 +43,7 @@ class CategoryController extends Controller
         $input = $request->all();
         $cat=new Category;
         $cat->name=request('name');
-        $cat->slug=request('slug');
+        $cat->slug=str_replace(' ', '-', strtolower($cat->name));
         $cat->desc=request('desc');
         $cat->cover='coversamp.jpg';
         $cat->save();

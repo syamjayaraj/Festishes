@@ -1,18 +1,22 @@
 @forelse($texts as $text)
+@php $tbody=nl2br(e($text->body)) @endphp
 <div class="col-md-4" style="padding-bottom: 20px"> 
   <div class="card bg-light mb-3  h-100">
       <div class="card-body">
-        <p class="card-text" id="copy-{{$text->id}}">{{$value=str_limit($text->body,250)}}</p>
+        <p class="card-text" id="copy-{{$text->id}}">
+          {!!$value=str_limit($tbody,300,
+            '...
+            <a href="" data-toggle="modal" data-target=#'.$text['id'].' data-toggle="tooltip" title="Expand" >Read more</a>'
+          )!!}
+        </p>
       </div>
       <div class="card-footer">
         <p class="card-text">
-        <div class="text-left">
-        <small class="text-muted">Fest : <a href={{url('fest/'.$text->cat_slug)}}>Onam</a></small>
-       </div>
-       <hr>
         <div class="text-right">
-          <a href="" class="btn btn-default" data-toggle="modal" data-target="#{{$text->id}}" data-toggle="tooltip" title="Expand" ><i class="fa fa-arrows-alt" aria-hidden="true" style="font-size: 20px;"></i></a>
-
+          <small class="text-muted">Fest : <a href={{url('fest/'.$text->cat_slug)}}>{{$cat_slug->name}}</a></small>
+          &nbsp&nbsp&nbsp
+          <a href="" onclick="copyToClipboard(document.getElementById('copy-{{$text->id}}'));" data-toggle="tooltip" title="Copy to Clipboard"><i class="fa fa-clipboard" style="font-size:20px"></i></a>
+          &nbsp&nbsp&nbsp
           <a href="{{ URL::to('fest/'.$text->cat_slug).'/texts/'.$text->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
         </div>
         </p>
