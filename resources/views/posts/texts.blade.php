@@ -12,7 +12,7 @@
           </p>
           <div class="jumbotron jumbo-cover" style="background-image: url('../../images/sitedata/cover/{{$cat_slug->cover}}');">
               <h4 class="stroke">{{$cat_slug->name}}</h4>
-              <p>{!!nl2br(e($cat_slug->desc))!!}</p>
+              <p class="stroke">{!!nl2br(e($cat_slug->desc))!!}</p>
           </div>
          <nav class="breadcrumb">
           <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug)}}">Latest</a>            
