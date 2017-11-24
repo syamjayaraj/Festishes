@@ -40,6 +40,7 @@ class TextController extends Controller
     {
         $txt=new Text;
         $txt->cat_slug=request('cat_slug');
+        $txt->email=request('email');
         $txt->body=request('wishing');
         $txt->feat=0;
         $txt->save();
@@ -63,6 +64,8 @@ class TextController extends Controller
     public function showexp($slug,$id)
     {
         $text = Text::where('cat_slug',$slug)->where('id',$id)->first();
+        $feat=$text->feat+1;
+        Text::where('cat_slug', $slug)->where('id',$id)->update(array('feat' => $feat)); 
         return view('posts.textcardmax',compact('text'));
     }
 

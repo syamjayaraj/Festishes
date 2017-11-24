@@ -48,6 +48,7 @@ class VideoController extends Controller
         $file->move($filepath , $filename);
         $vdo=new Video;
         $vdo->cat_slug=request('cat_slug');
+        $vdo->email=request('email');
         $vdo->name=$filename;
         $vdo->size=$filesize;
         $vdo->feat=0;
@@ -72,6 +73,8 @@ class VideoController extends Controller
     public function showexp($slug,$id)
     {
         $video = Video::where('cat_slug',$slug)->where('id',$id)->first();
+        $feat=$video->feat+1;
+        Video::where('cat_slug', $slug)->where('id',$id)->update(array('feat' => $feat)); 
         return view('posts.videocardmax',compact('video'));
     }
 

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-Abput | Festishes
+About
 @endsection
 @section('content')
     <div class="container">

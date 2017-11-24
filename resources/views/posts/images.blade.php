@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-{{$cat_slug->name}} | Images | Festishes
+{{$cat_slug->name}} | Images
 @endsection
 @section('content')
     <div class="container">
@@ -11,8 +11,10 @@
             <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Other Festivals</button>
           </p>
           <div class="jumbotron jumbo-cover" style="background-image: url('../../images/sitedata/cover/{{$cat_slug->cover}}');">
+            <div class="cover-box">
               <h4 class="stroke">{{$cat_slug->name}}</h4>
               <p class="stroke">{!!nl2br(e($cat_slug->desc))!!}</p>
+            </div>
           </div>
          <nav class="breadcrumb">
           <a class="breadcrumb-item" href="{{url('/fest/'.$cat_slug->slug)}}">Latest</a>            

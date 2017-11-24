@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-Contact | Festishes
+Contact
 @endsection
 @section('content')
     <div class="container">

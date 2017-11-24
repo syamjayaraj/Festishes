@@ -27,6 +27,7 @@ Create
 {{csrf_field()}}
   <fieldset>
   <input type="hidden" name="cat_slug" value="{{$cat}}">
+  <input type="hidden" name="email" value="{{ Auth::user()->email }}" >
   <div class="form-group">
     <label>Upload the image wishing</label>
     <input type="file" class="form-control-file" name="wishing">

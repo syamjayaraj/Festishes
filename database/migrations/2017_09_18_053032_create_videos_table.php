@@ -20,6 +20,7 @@ class CreateVideosTable extends Migration
             $table->string('name');
             $table->string('size');
             $table->integer('feat');
+            $table->string('email');
         });
     }
 

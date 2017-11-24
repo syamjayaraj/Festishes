@@ -19,6 +19,7 @@ class CreateTextsTable extends Migration
             $table->string('cat_slug');           
             $table->text('body');
             $table->integer('feat');
+            $table->string('email');
         });
     }
 

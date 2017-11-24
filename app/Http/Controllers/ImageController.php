@@ -48,6 +48,7 @@ class ImageController extends Controller
             $file->move($filepath , $filename);
             $img=new Image;
             $img->cat_slug=request('cat_slug');
+            $img->email=request('email');
             $img->name=$filename;
             $img->size=$filesize;
             $img->feat=0;
@@ -72,6 +73,8 @@ class ImageController extends Controller
     public function showexp($slug,$id)
     {
         $image = Image::where('cat_slug',$slug)->where('id',$id)->first();
+        $feat=$image->feat+1;
+        Image::where('cat_slug', $slug)->where('id',$id)->update(array('feat' => $feat));        
         return view('posts.imagecardmax',compact('image'));
     }
 

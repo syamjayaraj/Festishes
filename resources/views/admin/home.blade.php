@@ -4,17 +4,12 @@ Dashboard
 @endsection
 @section('content')
     <div class="container">
-
       <div class="row row-offcanvas row-offcanvas-right">
-
         <div class="col-12 col-md-9">
           <p class="float-right hidden-md-up canvas-button">
             <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Menu </button>
           </p>
-          <div class="jumbotron jumbo-cover">
-            <h1>Hello, guys!</h1>
-            <p>Select the festival to get wishing messages,images and videos and send it to those are favorite for you.</p>
-          </div>
+<section id="dashboard">
         <nav class="breadcrumb">           
             <a class="breadcrumb-item" href="">Dashboard</a>
         </nav>
@@ -67,7 +62,9 @@ Dashboard
                 </div>
               </div>
             </div>
-            </div>
+          </div>
+</section>
+<section id="admins">
       <p><span class="badge badge-secondary">Admins</span></p>
       <table class="table">
         <thead>
@@ -93,6 +90,6 @@ Dashboard
 </div>
         @include('admin.layouts.sidebar')
       </div>
-
+</section>
 
 @endsection

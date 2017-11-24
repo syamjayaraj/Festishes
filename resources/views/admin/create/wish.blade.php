@@ -32,7 +32,6 @@ Create
               @foreach($categories as $category)
               <option value="{{$category->slug}}">{{$category->name}}</option>
               @endforeach
-
             </select>
           </div>
         </div>

@@ -19,7 +19,6 @@ Create
             <a class="breadcrumb-item" href="">Create</a>
             <a class="breadcrumb-item" href="">{{$slug}}</a>
         </nav>
-
       <p><span class="badge badge-secondary">Festivals</span></p>
 <form class="form-horizontal" method="POST" action="/festcover" enctype="multipart/form-data">
 {{csrf_field()}}

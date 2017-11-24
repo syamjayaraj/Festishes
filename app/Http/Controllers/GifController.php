@@ -49,6 +49,7 @@ class GifController extends Controller
             $file->move($filepath , $filename);
             $gif=new Gif;
             $gif->cat_slug=request('cat_slug');
+            $gif->email=request('email');
             $gif->name=$filename;
             $gif->size=$filesize;
             $gif->feat=0;
@@ -69,6 +70,13 @@ class GifController extends Controller
         $gifs=Gif::where('cat_slug',$slug)->get();
         $cat_slug=Category::where('slug',$slug)->first();
         return view('posts.gifs',compact('categories','gifs','cat_slug'));
+    }
+    public function showexp($slug,$id)
+    {
+        $gif = Gif::where('cat_slug',$slug)->where('id',$id)->first();
+        $feat=$gif->feat+1;
+        Gif::where('cat_slug', $slug)->where('id',$id)->update(array('feat' => $feat)); 
+        return view('posts.gifcardmax',compact('gif'));
     }
 
     /**

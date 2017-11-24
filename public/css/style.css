@@ -41,7 +41,7 @@ footer{
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
 @media (min-width:1281px) { /* hi-res laptops and desktops */ }
 
-#image .jumbo-cover{
+/*#image .jumbo-cover{
     background-color: ##d8dbc5;
     margin-bottom: 2rem;`enter code here`
     min-height: 50%;
@@ -59,7 +59,7 @@ footer{
 
 #gif .jumbo-cover{
    background-image: url("../images/sitedata/cover/videos.jpg");
-}
+}*/
 
 .custom-file-control:before{
   content: "Browse";
@@ -68,7 +68,18 @@ footer{
   content: "Add files..";
 }
 
-.stroke{
-  font-family: system-ui;
-  -webkit-text-stroke: 1px #b4c691;
+.cover-box {
+    width: 500px;
+    padding: 20px;
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 20px;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
+    font-family: Arial, Helvetica, sans-serif;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .cover-box {
+    width: 280px;
+    }
 }

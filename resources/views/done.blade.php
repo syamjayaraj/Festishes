@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('title')
+Done
+@endsection
 @section('content')
     <div class="container">
         <div class="row row-offcanvas row-offcanvas-right">
@@ -8,7 +11,7 @@
                         <h3 class="panel-title">Done !!!</h3>
                         <p>Thank you for being touch with us.We will get back to you as soon as possible.</p>
                         <p>Click the below button to reach home</p>
-                        <h2><a href={{url('admin')}}><button class="btn btn-info btn-lg">Home</button></a></h2>
+                        <h2><a href={{url('/')}}><button class="btn btn-info btn-lg">Home</button></a></h2>
             </div>
         </div>
 @endsection

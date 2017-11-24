@@ -17,6 +17,7 @@
         <div class="text-right">
           <small class="text-muted">Fest : <a href={{url('fest/'.$text->cat_slug)}}>{{$cat_slug->name}}</a></small>
           &nbsp&nbsp&nbsp
+          <small class="text-muted" data-toggle="tooltip" title="Total Views"><i class="fa fa-eye" style="font-size: 10px;"></i> {{$text->feat}}</small>&nbsp&nbsp&nbsp
           <a href="" onclick="copyToClipboard(document.getElementById('copy-{{$text->id}}'));" data-toggle="tooltip" title="Copy to Clipboard"><i class="fa fa-clipboard" style="font-size:20px"></i></a>
           &nbsp&nbsp&nbsp
           <a href="{{ URL::to('fest/'.$text->cat_slug).'/texts/'.$text->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
@@ -39,6 +40,7 @@
         {{$text->body}}
       </div>
       <div class="modal-footer">
+        <small class="text-muted" data-toggle="tooltip" title="Total Views"><i class="fa fa-eye" style="font-size: 10px;"></i> {{$text->feat}}</small>&nbsp&nbsp&nbsp
       	<a href="" onclick="copyToClipboard(document.getElementById('copy-{{$text->id}}'));" data-toggle="tooltip" title="Copy to Clipboard"><i class="fa fa-clipboard" style="font-size:36px"></i></a>
         &nbsp&nbsp&nbsp
           <a href="{{ URL::to('fest/'.$text->cat_slug).'/feat/'.$text->id}}" data-toggle="tooltip" title="Go to Share Wall"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;"></i></a>  
@@ -64,13 +66,12 @@
       </div>
       <div class="card-footer">
         <p class="card-text">
-        <div class="text-left">
-          <small class="text-muted">Fest : <a href={{url('fest/'.$image->cat_slug)}}>{{$cat_slug->name}}</a></small>
-          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="{{url('images/wishings/image/'.$image->name)}}" download="{{$image->name}}" data-toggle="tooltip" title="Download"><i class="fa fa-download" style="font-size:20px"></i></a>
-
+        <div class="text-right">
+          <small class="text-muted">Fest : <a href={{url('fest/'.$image->cat_slug)}}>{{$cat_slug->name}}</a></small>&nbsp&nbsp&nbsp
+          <small class="text-muted" data-toggle="tooltip" title="Total Views"><i class="fa fa-eye" style="font-size: 10px;"></i> {{$image->feat}}</small>&nbsp&nbsp&nbsp&nbsp
+          <a href="{{url('images/wishings/image/'.$image->name)}}" download="{{$image->name}}" data-toggle="tooltip" title="Download"><i class="fa fa-download" style="font-size:20px"></i></a>
           &nbsp&nbsp&nbsp
-          <a href=""><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
+          <a href="{{ URL::to('fest/'.$image->cat_slug).'/images/'.$image->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
         </div>
         </p>
       </div>
@@ -95,12 +96,11 @@
       <div class="card-footer">
         <p class="card-text">
         <div class="text-left">
-          <small class="text-muted">Fest : <a href={{url('fest/'.$gif->cat_slug)}}>{{$cat_slug->name}}</a></small>
-          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="{{url('gifs/wishings/gif/'.$gif->name)}}" download="{{$gif->name}}" data-toggle="tooltip" title="Download"><i class="fa fa-download" style="font-size:20px"></i></a>
-
+          <small class="text-muted">Fest : <a href={{url('fest/'.$gif->cat_slug)}}>{{$cat_slug->name}}</a></small>&nbsp&nbsp&nbsp
+          <small class="text-muted" data-toggle="tooltip" title="Total Views"><i class="fa fa-eye" style="font-size: 10px;"></i> {{$gif->feat}}</small>&nbsp&nbsp&nbsp
+          <a href="{{url('gifs/wishings/gif/'.$gif->name)}}" download="{{$gif->name}}" data-toggle="tooltip" title="Download"><i class="fa fa-download" style="font-size:20px"></i></a>
           &nbsp&nbsp&nbsp
-          <a href=""><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
+          <a href="{{ URL::to('fest/'.$gif->cat_slug).'/gifs/'.$gif->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
         </div>
         </p>
       </div>
@@ -130,12 +130,11 @@
       <div class="card-footer">
         <p class="card-text">
         <div class="text-left">
-          <small class="text-muted">Fest : <a href={{url('fest/'.$video->cat_slug)}}>{{$cat_slug->name}}</a></small>
-          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<a href="{{url('images/wishings/video/'.$video->name)}}" download="{{$video->name}}" data-toggle="tooltip" title="Download"><i class="fa fa-download" style="font-size:20px"></i></a>
-
+          <small class="text-muted">Fest : <a href={{url('fest/'.$video->cat_slug)}}>{{$cat_slug->name}}</a></small>&nbsp&nbsp&nbsp
+          <small class="text-muted" data-toggle="tooltip" title="Total Views"><i class="fa fa-eye" style="font-size: 10px;"></i> {{$video->feat}}</small>&nbsp&nbsp&nbsp
+          <a href="{{url('images/wishings/video/'.$video->name)}}" download="{{$video->name}}" data-toggle="tooltip" title="Download"><i class="fa fa-download" style="font-size:20px"></i></a>
           &nbsp&nbsp&nbsp
-          <a href=""><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
+          <a href="{{ URL::to('fest/'.$video->cat_slug).'/videos/'.$video->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
         </div>
         </p>
       </div>

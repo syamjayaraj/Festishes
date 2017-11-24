@@ -27,6 +27,7 @@ Create
 {{csrf_field()}}
   <fieldset>
     <input type="hidden" name="cat_slug" value="{{$cat}}">
+    <input type="hidden" name="email" value="{{ Auth::user()->email }}" >
     <div class="form-group">
       <div class="col-lg-6">
         <textarea class="form-control" name="wishing" rows="8" id="textArea" placeholder="Write the wishing message"></textarea>

@@ -6,13 +6,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    <title>@yield('title') | Festishes</title>
+    <title>@yield('title') | Festishes-Be the first to wish your favorites | Wishing messages-Texts,Images,Gifs,Videos</title>
     <!-- Bootstrap core CSS -->
     <link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{ URL::asset('css/offcanvas.css') }}" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="{{ URL::asset('js/jquery-3.2.1.js') }}"></script>
   </head>
 <body>
 	@include('layouts.header')
@@ -30,5 +31,15 @@
     <script src="{{ URL::asset('js/offcanvas.js') }}"></script>
     <script src="{{ URL::asset('js/modal.js') }}"></script>
     <script src="{{ URL::asset('js/copyclipboard.js') }}"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110090941-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110090941-1');
+    </script>
+
 </body>
 </html>

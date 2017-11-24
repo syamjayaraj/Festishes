@@ -20,6 +20,7 @@ class CreateGifsTable extends Migration
             $table->string('name');
             $table->integer('size');
             $table->integer('feat');
+            $table->string('email');
         });
     }
 

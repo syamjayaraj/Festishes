@@ -23,6 +23,7 @@ Create
 <form class="form-horizontal" method="POST" action="/festpost">
 {{csrf_field()}}
   <fieldset>
+        <input type="hidden" name="email" value="{{ Auth::user()->email }}" >
         <div class="form-group">
           <div class="col-lg-4">
             <input type="text" class="form-control" name="name" placeholder="Name">
@@ -32,11 +33,12 @@ Create
           <div class="col-lg-4">
             <textarea class="form-control" name="desc" rows="3" placeholder="Festival Description"></textarea>
           </div>
-    <div class="form-group">
-      <div class="col-lg-1 col-lg-offset-4">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-1 col-lg-offset-4">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
   </fieldset>
 </form>
 </div>

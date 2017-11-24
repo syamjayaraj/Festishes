@@ -42,6 +42,7 @@ class CategoryController extends Controller
     {
         $input = $request->all();
         $cat=new Category;
+        $cat->email=request('email');
         $cat->name=request('name');
         $cat->slug=str_replace(' ', '-', strtolower($cat->name));
         $cat->desc=request('desc');

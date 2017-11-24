@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-Home
+Featured
 @endsection
 @section('content')
     <div class="container">
@@ -11,8 +11,10 @@ Home
             <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">List of Festivals</button>
           </p>
           <div class="jumbotron jumbo-cover" style="background-image: url('../../images/sitedata/cover/{{$cat_slug->cover}}');">
+            <div class="cover-box">
               <h4 class="stroke">{{$cat_slug->name}}</h4>
               <p class="stroke">{!!nl2br(e($cat_slug->desc))!!}</p>
+            </div>
           </div>
          <nav class="breadcrumb">
           <a class="breadcrumb-item active" href="#">Latest</a>            

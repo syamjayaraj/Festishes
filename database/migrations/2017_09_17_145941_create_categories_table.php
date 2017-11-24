@@ -20,6 +20,7 @@ class CreateCategoriesTable extends Migration
             $table->string('slug');
             $table->text('desc');
             $table->string('cover');
+            $table->string('email');
         });
     }
 
