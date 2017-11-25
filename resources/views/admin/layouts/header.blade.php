@@ -11,9 +11,9 @@
         </form> --}}
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{{url('admin/create')}}">Create <span class="sr-only">(current)</span></a>
+            <a class="nav-link {{$nav_create or ''}}" href="{{url('admin/create')}}">Create <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item {{$nav_home or ''}}">
             <a class="nav-link" href="/admin">Home <span class="sr-only">(current)</span></a>
           </li>
           <li>

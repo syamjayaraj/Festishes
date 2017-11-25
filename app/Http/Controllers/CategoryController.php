@@ -48,7 +48,7 @@ class CategoryController extends Controller
         $cat->desc=request('desc');
         $cat->cover='coversamp.jpg';
         $cat->save();
-        $slug=$cat->slug;  
+        $slug=$cat->slug;
         return view ('/admin/create/fest_upload', compact('slug'));
     }
     public function upload(Request $request)

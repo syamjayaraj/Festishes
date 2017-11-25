@@ -1,3 +1,4 @@
+@php $nav_about = 'active'; @endphp
 @extends('layouts.master')
 @section('title')
 About

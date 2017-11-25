@@ -1,3 +1,4 @@
+@php $nav_home = 'active'; @endphp
 @extends('layouts.master')
 @section('title')
 Home

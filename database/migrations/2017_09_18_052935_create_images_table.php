@@ -19,6 +19,7 @@ class CreateImagesTable extends Migration
             $table->string('cat_slug');
             $table->string('name');
             $table->integer('size');
+            $table->string('caption');
             $table->integer('feat');
             $table->string('email');
         });

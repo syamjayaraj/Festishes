@@ -1,3 +1,4 @@
+@php $nav_help = 'active'; @endphp
 @extends('layouts.master')
 @section('title')
 Help

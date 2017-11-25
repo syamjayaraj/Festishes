@@ -52,6 +52,7 @@ class GifController extends Controller
             $gif->email=request('email');
             $gif->name=$filename;
             $gif->size=$filesize;
+            $gif->caption=request('caption');
             $gif->feat=0;
             $gif->save();
 

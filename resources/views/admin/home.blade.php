@@ -1,3 +1,4 @@
+@php $nav_home = 'active'; @endphp
 @extends('admin.layouts.master')
 @section('title')
 Dashboard
@@ -65,7 +66,7 @@ Dashboard
           </div>
 </section>
 <section id="admins">
-      <p><span class="badge badge-secondary">Admins</span></p>
+      <p><span class="badge badge-secondary">Top Admins</span></p>
       <table class="table">
         <thead>
           <tr>
@@ -76,9 +77,11 @@ Dashboard
           </tr>
         </thead>
         <tbody>
-@foreach($admins as $admin)          
+@php $id=0; @endphp          
+@foreach($admins as $admin)
+@php $id=$id+1; @endphp          
           <tr>
-            <td>{{$admin->id}}</td>
+            <td>{{$id}}</td>
             <td>{{$admin->name}}</td>
             <td>{{$admin->email}}</td>
             <td>{{$admin->created_at}}</td>

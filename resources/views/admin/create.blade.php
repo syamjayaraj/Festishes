@@ -1,3 +1,4 @@
+@php $nav_create = 'active'; @endphp
 @extends('admin.layouts.master')
 @section('title')
 Create

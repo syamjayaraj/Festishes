@@ -10,16 +10,16 @@
           <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
         </form> --}}
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item {{$nav_home or ''}}">
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{$nav_about or ''}}">
             <a class="nav-link" href="{{url('about')}}">About</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{$nav_contact or ''}}">
             <a class="nav-link" href="{{url('contact')}}">Contact</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{$nav_help or ''}}">
             <a class="nav-link" href="{{url('help')}}">Help</a>
           </li>
 {{--           <li class="nav-item dropdown">

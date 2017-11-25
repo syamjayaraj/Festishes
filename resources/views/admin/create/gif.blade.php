@@ -29,14 +29,21 @@ Create
   <input type="hidden" name="cat_slug" value="{{$cat}}">
   <input type="hidden" name="email" value="{{ Auth::user()->email }}" >
   <div class="form-group">
-    <label>Upload the Gif wishing</label>
-    <input type="file" class="form-control-file" name="wishing">
-  </div>
-    <div class="form-group">
-      <div class="col-lg-1 col-lg-offset-4">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
+    <div class="col-lg-12">
+      <label>Upload the Gif wishing</label>
+      <input type="file" class="form-control-file" name="wishing">
     </div>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-12">
+      <input type="text" class="form-control" name="caption" placeholder="Caption for the Gif">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-1 col-lg-offset-4">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
   </fieldset>
 </form>
 </div>

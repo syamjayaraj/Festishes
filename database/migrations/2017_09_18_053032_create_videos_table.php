@@ -19,6 +19,7 @@ class CreateVideosTable extends Migration
             $table->string('cat_slug');
             $table->string('name');
             $table->string('size');
+            $table->string('caption');
             $table->integer('feat');
             $table->string('email');
         });

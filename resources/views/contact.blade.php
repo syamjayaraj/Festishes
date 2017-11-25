@@ -1,3 +1,4 @@
+@php $nav_contact = 'active'; @endphp
 @extends('layouts.master')
 @section('title')
 Contact

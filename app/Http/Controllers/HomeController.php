@@ -28,7 +28,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $admins=User::all();
+        $admins=User::orderBy('email')->get();
         $txt=Text::count();
         $img=Image::count();
         $gif=Gif::count();

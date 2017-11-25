@@ -44,16 +44,16 @@ class ImageController extends Controller
             $file=Input::file('wishing');
             $filepath='images/wishings/image';
             $filename=date('D'.'M'.'Y').time('H').rand(0,999).'_'.$file->getClientOriginalName();
-            $filesize=$file->getClientSize()/1000;
+            $filesize=$file->getClientSize();
             $file->move($filepath , $filename);
             $img=new Image;
             $img->cat_slug=request('cat_slug');
             $img->email=request('email');
             $img->name=$filename;
             $img->size=$filesize;
+            $img->caption=request('caption');
             $img->feat=0;
             $img->save();
-
             return view('admin.create.done');
     }
 

@@ -51,6 +51,7 @@ class VideoController extends Controller
         $vdo->email=request('email');
         $vdo->name=$filename;
         $vdo->size=$filesize;
+        $vdo->caption=request('caption');
         $vdo->feat=0;
         $vdo->save();
 
