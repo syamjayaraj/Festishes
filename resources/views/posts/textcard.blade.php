@@ -13,7 +13,7 @@
       <div class="card-footer">
         <p class="card-text">
         <div class="text-right">
-          <small class="text-muted">Fest : <a href={{url('fest/'.$text->cat_slug)}}>{{$image->cat_slug}}</a></small>
+          <small class="text-muted">Fest : <a href={{url('fest/'.$text->cat_slug)}}>{{$text->cat_slug}}</a></small>
           &nbsp&nbsp&nbsp
           <small class="text-muted" data-toggle="tooltip" title="Total Views"><i class="fa fa-eye" style="font-size: 10px;"></i> {{$text->feat}}</small>&nbsp&nbsp&nbsp
           <a href="" onclick="copyToClipboard(document.getElementById('copy-{{$text->id}}'));" data-toggle="tooltip" title="Copy to Clipboard"><i class="fa fa-clipboard" style="font-size:20px"></i></a>
