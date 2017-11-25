@@ -11,6 +11,7 @@ Contact
             <div class="col-md-4 center">
                     <div class="panel-heading">
                         <h3 class="panel-title">Contact Us</h3>
+                        <hr>
                     </div>
                     <div class="panel-body">
                         <form role="form" method="POST" action="/addcontact">

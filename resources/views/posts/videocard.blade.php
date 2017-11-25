@@ -22,7 +22,7 @@
       <div class="card-footer">
         <p class="card-text">
         <div class="text-right">
-          <a href="{{url('images/wishings/video/'.$video->name)}}" download="{{$video->name}}" data-toggle="tooltip" title="Download"><i class="fa fa-download" style="font-size:20px"></i></a>
+          <a href="{{url('images/wishings/video/'.$video->name)}}" download="{{$video->name}}" data-toggle="tooltip" title="Download"><i class="fa fa-download" style="font-size:20px"></i><small>({{$size}}mb)</small></a>
           &nbsp&nbsp&nbsp
           <a href="{{ URL::to('fest/'.$video->cat_slug).'/videos/'.$video->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
         </div>
