@@ -1,5 +1,8 @@
 @forelse($videos as $video)
-@php $size=round($video->size/1000,1);  @endphp
+@php
+$size=round($video->size/1000,1);
+$videourl=str_limit(preg_replace('/\s+/', '-', $video->caption),60,'-');
+@endphp
 <div class="col-md-4" style="padding-bottom: 20px"> 
   <div class="card bg-light mb-3  h-100">
       <div class="card-body">
@@ -24,7 +27,7 @@
         <div class="text-right">
           <a href="{{url('images/wishings/video/'.$video->name)}}" download="{{$video->name}}" data-toggle="tooltip" title="Download"><i class="fa fa-download" style="font-size:20px"></i><small>({{$size}}mb)</small></a>
           &nbsp&nbsp&nbsp
-          <a href="{{ URL::to('fest/'.$video->cat_slug).'/videos/'.$video->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
+          <a href="{{ URL::to('fest/'.$video->cat_slug).'/videos/'.$videourl.$video->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
         </div>
         </p>
       </div>

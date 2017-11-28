@@ -20,16 +20,16 @@ Route::get('fest/{post}/feat/{id}','PostController@showfeatexp');
 
 // Text posts
 Route::get('fest/{post}/texts', 'TextController@show');
-Route::get('fest/{post}/texts/{id}', 'TextController@showexp');
+Route::get('fest/{post}/texts/{caption}{id}', 'TextController@showexp');
 // Image posts
 Route::get('fest/{post}/images', 'ImageController@show');
-Route::get('fest/{post}/images/{id}', 'ImageController@showexp');
+Route::get('fest/{post}/images/{caption}{id}', 'ImageController@showexp');
 // Gif posts
 Route::get('fest/{post}/gifs', 'GifController@show');
-Route::get('fest/{post}/gifs/{id}', 'GifController@showexp');
+Route::get('fest/{post}/gifs/{caption}{id}', 'GifController@showexp');
 // Video posts
 Route::get('fest/{post}/videos', 'VideoController@show');
-Route::get('fest/{post}/videos/{id}', 'VideoController@showexp');
+Route::get('fest/{post}/videos/{caption}{id}', 'VideoController@showexp');
 
 // About
 Route::get('about',function(){

@@ -1,5 +1,8 @@
 @forelse($images as $image)
-@php $size=round($image->size/1000,1);  @endphp
+@php 
+$size=round($image->size/1000,1);
+$imgurl=str_limit(preg_replace('/\s+/', '-', $image->caption),60,'-');
+@endphp
 <div class="col-md-4" style="padding-bottom: 20px"> 
   <div class="card bg-light mb-3  h-100">
       <div class="card-body">
@@ -17,9 +20,9 @@
       <div class="card-footer">
         <p class="card-text">
         <div class="text-right">
-          <a href="{{url('images/wishings/image/'.$image->name)}}" download="{{$image->name}}" data-toggle="tooltip" title="Download"><i class="fa fa-download" style="font-size:20px"></i><small>({{$size}}mb)</small></a>
+          <a href="{{url('images/wishings/image/'.$image->name)}}" download="{{$image->name}}" data-toggle="tooltip" title="Download"><i class="fa fa-download" style="font-size:20px"></i><small>({{$size}} mb)</small></a>
           &nbsp&nbsp&nbsp
-          <a href="{{ URL::to('fest/'.$image->cat_slug).'/images/'.$image->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
+          <a href="{{ URL::to('fest/'.$image->cat_slug).'/images/'.$imgurl.$image->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
         </div>
         </p>
       </div>

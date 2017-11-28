@@ -1,5 +1,8 @@
 @forelse($texts as $text)
-@php $tbody=nl2br(e($text->body)) @endphp
+@php
+$tbody=nl2br(e($text->body));
+$texturl=str_limit(preg_replace('/\s+/', '-', $text->body),60,'-');
+@endphp
 <div class="col-md-4" style="padding-bottom: 20px"> 
   <div class="card bg-light mb-3  h-100">
       <div class="card-body">
@@ -18,7 +21,7 @@
           <small class="text-muted" data-toggle="tooltip" title="Total Views"><i class="fa fa-eye" style="font-size: 10px;"></i> {{$text->feat}}</small>&nbsp&nbsp&nbsp
           <a href="" onclick="copyToClipboard(document.getElementById('copy-{{$text->id}}'));" data-toggle="tooltip" title="Copy to Clipboard"><i class="fa fa-clipboard" style="font-size:20px"></i></a>
           &nbsp&nbsp&nbsp
-          <a href="{{ URL::to('fest/'.$text->cat_slug).'/texts/'.$text->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
+          <a href="{{ URL::to('fest/'.$text->cat_slug).'/texts/'.$texturl.$text->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
         </div>
         </p>
       </div>
@@ -44,7 +47,7 @@
         <small class="text-muted" data-toggle="tooltip" title="Total Views"><i class="fa fa-eye" style="font-size: 10px;"></i> {{$text->feat}}</small>&nbsp&nbsp&nbsp
         <a href="" onclick="copyToClipboard(document.getElementById('copy-{{$text->id}}'));" data-toggle="tooltip" title="Copy to Clipboard"><i class="fa fa-clipboard" style="font-size:36px"></i></a>
         &nbsp&nbsp&nbsp
-          <a href="{{ URL::to('fest/'.$text->cat_slug).'/texts/'.$text->id}}" data-toggle="tooltip" title="Go to Share Wall"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;"></i></a>  
+          <a href="{{ URL::to('fest/'.$text->cat_slug).'/texts/'.$texturl.$text->id}}" data-toggle="tooltip" title="Go to Share Wall"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;"></i></a>  
       </div>
     </div>
   </div>

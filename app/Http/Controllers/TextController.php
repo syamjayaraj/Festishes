@@ -61,7 +61,7 @@ class TextController extends Controller
         return view('posts.texts', compact('texts','categories','cat_slug'));
     }
 
-    public function showexp($slug,$id)
+    public function showexp($slug,$cap,$id)
     {
         $text = Text::where('cat_slug',$slug)->where('id',$id)->first();
         $feat=$text->feat+1;

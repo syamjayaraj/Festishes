@@ -17,16 +17,16 @@ Contact
                         <form role="form" method="POST" action="/addcontact">
                         {{csrf_field()}}
                             <div class="form-group">
-                                <input type="text" name="name" class="form-control" placeholder="Name">
+                                <input type="text" name="name" class="form-control" placeholder="Name" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" class="form-control" placeholder="Email">
+                                <input type="email" name="email" class="form-control" placeholder="Email" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="mobile" class="form-control" placeholder="Mobile No.">
+                                <input type="text" name="mobile" class="form-control" placeholder="Mobile No." required>
                             </div>
                             <div class="form-group">
-                                <textarea name="msg"class="form-control" rows="3" placeholder="Enter your message"></textarea>
+                                <textarea name="msg"class="form-control" rows="5" placeholder="Enter your message" required></textarea>
                             </div>
                             <div class="form-group">
                             <button type="submit" class="btn btn-primary">Submit</button>

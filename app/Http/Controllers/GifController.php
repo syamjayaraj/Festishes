@@ -72,7 +72,7 @@ class GifController extends Controller
         $cat_slug=Category::where('slug',$slug)->first();
         return view('posts.gifs',compact('categories','gifs','cat_slug'));
     }
-    public function showexp($slug,$id)
+    public function showexp($slug,$cap,$id)
     {
         $gif = Gif::where('cat_slug',$slug)->where('id',$id)->first();
         $feat=$gif->feat+1;

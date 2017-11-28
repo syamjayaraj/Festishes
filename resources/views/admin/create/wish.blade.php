@@ -27,8 +27,8 @@ Create
   <fieldset>
         <div class="form-group">
           <div class="col-lg-4">
-            <select class="custom-select" name="cat">
-              <option selected disabled="true">Select Festival</option>
+            <select class="custom-select" name="cat" required>
+              <option selected disabled>Select Festival</option>
               @foreach($categories as $category)
               <option value="{{$category->slug}}">{{$category->name}}</option>
               @endforeach

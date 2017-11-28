@@ -70,7 +70,7 @@ class ImageController extends Controller
         $cat_slug=Category::where('slug',$slug)->first();
         return view('posts.images', compact('images','categories','cat_slug'));
     }
-    public function showexp($slug,$id)
+    public function showexp($slug,$cap,$id)
     {
         $image = Image::where('cat_slug',$slug)->where('id',$id)->first();
         $feat=$image->feat+1;

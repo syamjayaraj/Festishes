@@ -71,7 +71,7 @@ class VideoController extends Controller
         $cat_slug=Category::where('slug',$slug)->first();
         return view('posts.videos', compact('videos','categories','cat_slug'));
     }
-    public function showexp($slug,$id)
+    public function showexp($slug,$cap,$id)
     {
         $video = Video::where('cat_slug',$slug)->where('id',$id)->first();
         $feat=$video->feat+1;

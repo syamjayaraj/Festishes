@@ -1,5 +1,8 @@
 @forelse($gifs as $gif)
-@php $size=round($gif->size/1000,1);  @endphp
+@php
+$size=round($gif->size/1000,1);
+$gifurl=str_limit(preg_replace('/\s+/', '-', $gif->caption),60,'-');
+@endphp
 <div class="col-md-4" style="padding-bottom: 20px"> 
   <div class="card bg-light mb-3  h-100">
       <div class="card-body">
@@ -19,7 +22,7 @@
         <div class="text-right">
           <a href="{{url('images/wishings/gif/'.$gif->name)}}" download="{{$gif->name}}" data-toggle="tooltip" title="Download"><i class="fa fa-download" style="font-size:20px"></i><small>({{$size}}mb)</small></a>
           &nbsp&nbsp&nbsp
-          <a href="{{ URL::to('fest/'.$gif->cat_slug).'/gifs/'.$gif->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
+          <a href="{{ URL::to('fest/'.$gif->cat_slug).'/gifs/'.$gifurl.$gif->id}}"><i class="fa fa-arrow-right" aria-hidden="true" style="font-size: 20px;" data-toggle="tooltip" title="Go to Share Wall"></i></a>
         </div>
         </p>
       </div>

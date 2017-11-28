@@ -12,16 +12,16 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="{{ URL::asset('css/exp.css') }}" rel="stylesheet">
   </head>
-<body>
+<body class="flexcroll">
+@include('layouts.headermax')
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
           @yield('content')
-
           <footer class="mastfoot">
             <div class="inner">
-              <p>Made with Love in God's own country | Designed by <a href="http://devhornet.com">DevHornet</a></p>
-              <p>Copyright &copy; <a href="http://floyet.com">FloYET</a> 2017</p>
+              <p>Made with Love in God's own country | Designed by <a href="http://www.devhornet.com">DevHornet</a></p>
+              <p>Copyright &copy; <a href="http://www.festishes.com">Festishes</a> 2017</p>
             </div>
           </footer>
         </div>
